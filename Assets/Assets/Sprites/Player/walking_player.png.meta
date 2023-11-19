@@ -113,7 +113,7 @@ TextureImporter:
       name: walking_player_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 11
         y: 162
         width: 17
         height: 45

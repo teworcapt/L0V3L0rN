@@ -8,5 +8,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/OpeningCutscene.unity
+    guid: 57bc09bb1d9d5c44d9399bca70cb7d66
+  - enabled: 1
+    path: Assets/Scenes/Bedroom.unity
+    guid: fbde9d460fa324448a67d986130ea484
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: 8def5c62424bb054a950875fb0ec9eff
+  - enabled: 1
+    path: Assets/Scenes/Bathroom.unity
+    guid: e194f712e4e3bb44ba01596bace1e528
+  - enabled: 1
+    path: Assets/Scenes/Living Room.unity
+    guid: 7391eb9228bfdc14fa5d478c01440f3e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c018fccf3a0fa51449e28a04b099d4ad, type: 2}

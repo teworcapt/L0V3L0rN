@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Deletable
   layers:
   - Default
   - TransparentFX
@@ -53,9 +54,15 @@ TagManager:
   - name: Furniture
     uniqueID: 4257176091
     locked: 0
+  - name: Clutter
+    uniqueID: 11303187
+    locked: 0
   - name: Enemies
     uniqueID: 190774757
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 299855751
     locked: 0
