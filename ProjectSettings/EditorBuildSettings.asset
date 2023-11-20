@@ -18,10 +18,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Hallway.unity
     guid: 8def5c62424bb054a950875fb0ec9eff
   - enabled: 1
+    path: Assets/Scenes/BathroomScene.unity
+    guid: 4d2eb6428d7fc52448c0a7354289fc80
+  - enabled: 1
     path: Assets/Scenes/Bathroom.unity
     guid: e194f712e4e3bb44ba01596bace1e528
   - enabled: 1
     path: Assets/Scenes/Living Room.unity
     guid: 7391eb9228bfdc14fa5d478c01440f3e
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: 1740a475dfed8f043982ce0397e519f7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c018fccf3a0fa51449e28a04b099d4ad, type: 2}
