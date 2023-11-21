@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        Application.OpenURL("https://docs.google.com/document/d/1A0SxpLEWufr9vfMzz5u5j4Mj8p4i0yEP8AKZIZew18o/edit?usp=sharing");
+        Application.OpenURL("https://itch.io/c/3725824/l0v3l0rn-used-assets");
     }
 
 }
