@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 127825019}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnHealButton
+        m_MethodName: OnAttackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -506,6 +506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace5d3b76e8bbd94d8faa070310b062d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 907159084}
+  player: {fileID: 0}
+  transition: {fileID: 907159083}
+  music: {fileID: 8300000, guid: c0a840f1eadb06e4085a0b11f1b4bba8, type: 3}
+  source: {fileID: 0}
   playerPrefab: {fileID: 5915591220571920689, guid: 55f5bc82595000648a43f466e3c4bebf, type: 3}
   enemyPrefab: {fileID: 6902146873542428657, guid: 6e4cf9e9a61fff74da80bf37f3bee81b, type: 3}
   combatButtons: {fileID: 1327488928}
@@ -1219,7 +1224,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
@@ -1228,14 +1232,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1486,7 +1482,6 @@ GameObject:
   - component: {fileID: 647656032}
   - component: {fileID: 647656031}
   - component: {fileID: 647656030}
-  - component: {fileID: 647656034}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1580,21 +1575,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &647656034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647656029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf367e37583e8c1448590ded0e6b8ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 907159083}
-  sceneBuildIndex: 8
-  exitPoint: 
 --- !u!1 &736408956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,7 +2138,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 530236254562042170, guid: bc5e12c18324c264181716e5e6551ac9, type: 3}
   m_PrefabInstance: {fileID: 907159081}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &907159083 stripped
+--- !u!1 &907159083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2815161421029674617, guid: bc5e12c18324c264181716e5e6551ac9, type: 3}
+  m_PrefabInstance: {fileID: 907159081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &907159084 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3395902418849750692, guid: bc5e12c18324c264181716e5e6551ac9, type: 3}
   m_PrefabInstance: {fileID: 907159081}

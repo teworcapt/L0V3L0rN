@@ -2,33 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using static Unity.VisualScripting.Member;
 
 public enum BattleState { START, PLAYERTURN, ACTIONCHOSEN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
 {
-    private PlayerManager player;
+	[Header("Components")]
+    public Animator transitionAnim;
+    public GameObject player;
+    public AudioSource source;
+    public Text dialogueText;
+
+    [Header("Prefabs & Sprites")]
     public GameObject playerPrefab;
 	public GameObject enemyPrefab;
 	public GameObject combatButtons;
-
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
+    public BattleHUD playerHUD;
+    public BattleHUD enemyHUD;
 
-	Unit playerUnit;
+    [Header("Information")]
+    Unit playerUnit;
 	Unit enemyUnit;
-
-	public Text dialogueText;
-
-	public BattleHUD playerHUD;
-	public BattleHUD enemyHUD;
 
 	public BattleState state;
 
+    private void Awake()
+    {
+        player = GameObject.FindWithTag("Player");
+        player.SetActive(false);
+        if (GameObject.FindWithTag("MainCamera"))
+        {
+            source = FindFirstObjectByType<AudioSource>();
+            source.volume = 0;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(player);
         state = BattleState.START;
 		StartCoroutine(SetupBattle());
     }
@@ -122,13 +136,26 @@ public class BattleSystem : MonoBehaviour
 		if(state == BattleState.WON)
 		{
             dialogueText.text = "\"I guess I get to live to see another day.\"";
+
+
         } else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "\"Ev3n after de4th, y0u're m1ne\" ";
-		}
-	}
+        }
 
-	void PlayerTurn()
+		StartCoroutine(NextScene());
+    }
+
+    IEnumerator NextScene()
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
+        source.volume = 0.5f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        transitionAnim.SetTrigger("Start");
+    }
+
+    void PlayerTurn()
 	{
 		dialogueText.text = "\"What should I do?\"";
         combatButtons.SetActive(true);

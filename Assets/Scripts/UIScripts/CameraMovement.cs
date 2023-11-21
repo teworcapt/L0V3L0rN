@@ -7,7 +7,7 @@ public class CameraMovement : MonoBehaviour
     public GameObject followTarget;
     private Vector3 targetPos;
     public float moveSpeed;
-    private static bool cameraExists;
+    public static bool cameraExists;
 
     // Start is called before the first frame update
     void Start()

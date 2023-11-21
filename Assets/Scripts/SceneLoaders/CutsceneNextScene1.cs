@@ -5,34 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class CutsceneNextScene : MonoBehaviour
 {
-    public float Cutscenetime;
+    [Header("Components")]
     public Animator transitionAnim;
-    public PlayerManager player;
-    public AudioClip CutsceneAudio;
-    public AudioSource Cam;
+    public float Cutscenetime;
+
+    public GameObject transition;
+
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        transition.SetActive(false);
+    }
+
     void Start()
     {
-        player = FindObjectOfType<PlayerManager>();
-        Destroy(player);
         StartCoroutine(NextScene());
-        Cam = GetComponent<AudioSource>();
-
-        Cam.clip = CutsceneAudio;
-        Cam.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     IEnumerator NextScene()
     {
         yield return new WaitForSeconds(Cutscenetime);
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1f);
+        transition.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         transitionAnim.SetTrigger("Start");
     }

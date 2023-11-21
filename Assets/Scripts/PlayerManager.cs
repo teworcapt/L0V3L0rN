@@ -28,11 +28,10 @@ public class PlayerManager : MonoBehaviour
             playerExist = true;
             DontDestroyOnLoad(transform.gameObject);
         }
-        else 
+        else
         {
             Destroy(gameObject);
         }
-
 
         canMove = true; 
     }

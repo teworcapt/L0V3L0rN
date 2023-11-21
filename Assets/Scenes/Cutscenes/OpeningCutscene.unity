@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: 1086629636}
   - component: {fileID: 1086629635}
   - component: {fileID: 1086629638}
-  - component: {fileID: 1086629639}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -361,9 +360,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1943748cc2375234a98b0c44ca354adb, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.359
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -447,20 +446,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1086629639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086629634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dad1e0225cfa6741959e52be310b42f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cutscenetime: 20
-  transitionAnim: {fileID: 2064593185}
 --- !u!1001 &1149352967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,6 +547,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5e12c18324c264181716e5e6551ac9, type: 3}
+--- !u!95 &1149352968 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3395902418849750692, guid: bc5e12c18324c264181716e5e6551ac9, type: 3}
+  m_PrefabInstance: {fileID: 1149352967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1149352969 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2815161421029674617, guid: bc5e12c18324c264181716e5e6551ac9, type: 3}
+  m_PrefabInstance: {fileID: 1149352967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1205067078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1054,7 @@ GameObject:
   - component: {fileID: 1753562961}
   - component: {fileID: 1753562960}
   - component: {fileID: 1753562962}
+  - component: {fileID: 1753562963}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -1083,8 +1079,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -3110139571539643691, guid: f20be2499de393a4c9b1dd0c9bb6ce60, type: 2}
     value: {fileID: 1419097543}
-  - key: {fileID: 1385783149740623770, guid: f20be2499de393a4c9b1dd0c9bb6ce60, type: 2}
-    value: {fileID: 1086629638}
+  - key: {fileID: 7510270628134430006, guid: f20be2499de393a4c9b1dd0c9bb6ce60, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - bae49e8d69d5cb442b7e9bc282b0aa19: {fileID: 1205067078}
@@ -1122,6 +1118,21 @@ SortingGroup:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &1753562963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753562959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13436c3abce25924b9b45385a98b7032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 1149352968}
+  Cutscenetime: 19
+  transition: {fileID: 1149352969}
 --- !u!1 &1867504243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,11 +1267,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867504243}
   m_CullTransparentMesh: 1
---- !u!95 &2064593185 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3395902418849750692, guid: bc5e12c18324c264181716e5e6551ac9, type: 3}
-  m_PrefabInstance: {fileID: 1149352967}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
