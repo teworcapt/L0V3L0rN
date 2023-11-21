@@ -133,7 +133,9 @@ public class BattleSystem : MonoBehaviour
 
 	void EndBattle()
 	{
-		if(state == BattleState.WON)
+        combatButtons.SetActive(false);
+
+        if (state == BattleState.WON)
 		{
             dialogueText.text = "\"I guess I get to live to see another day.\"";
 
@@ -150,7 +152,6 @@ public class BattleSystem : MonoBehaviour
     {
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1f);
-        source.volume = 0.5f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         transitionAnim.SetTrigger("Start");
     }

@@ -1,9 +1,7 @@
- using Microsoft.Unity.VisualStudio.Editor;
  using System;
  using System.Collections;
  using System.Collections.Generic;
  using System.Reflection;
- using UnityEditor.VersionControl;
  using UnityEngine;
  using TMPro;
  using Image = UnityEngine.UI.Image;

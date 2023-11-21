@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Battle.unity
     guid: 1740a475dfed8f043982ce0397e519f7
   - enabled: 1
-    path: Assets/Scenes/EndingScene.unity
-    guid: 477481dfd27214f488d2f0ccc48accc1
+    path: Assets/Scenes/Cutscenes/EndingScene.unity
+    guid: 1b1f41067deb2cb48b7fa90d16956c3e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c018fccf3a0fa51449e28a04b099d4ad, type: 2}
